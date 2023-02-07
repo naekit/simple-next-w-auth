@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Post from "./Post"
 
 const User: any = async ({ user }: any) => {
 	return (
@@ -10,6 +11,7 @@ const User: any = async ({ user }: any) => {
 					style={{ objectFit: "cover" }}
 					width={200}
 					height={200}
+					priority
 				/>
 				<h1 className="text-2xl font-semibold">{user.name}</h1>
 				<p className="text-sm text-stone-700">{user.email}</p>
@@ -20,14 +22,7 @@ const User: any = async ({ user }: any) => {
 				)}
 				<ul>
 					{user.posts?.map((post: any) => (
-						<li key={post.id}>
-							<h3 className="text-lg font-semibold">
-								{post.title}
-							</h3>
-							<p className="text-sm text-stone-700">
-								{post.content}
-							</p>
-						</li>
+						<Post key={post.id} post={post} />
 					))}
 				</ul>
 			</div>
