@@ -10,7 +10,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<head />
-			<body className="h-screen">
+			<body className="h-screen bg-stone-200">
 				<Header />
 				<main>{children}</main>
 				<Footer />

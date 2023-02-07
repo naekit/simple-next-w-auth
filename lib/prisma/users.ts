@@ -1,9 +1,9 @@
 import prisma from "."
 
-export async function getUser() {
+export async function getUsers(): Promise<any> {
 	try {
 		const users = await prisma.user.findMany()
-		return users
+		return { users }
 	} catch (error) {
 		console.error(error)
 		return { error }

@@ -20,9 +20,9 @@ export default function Header() {
 					<li>
 						<Link
 							className="text-gray-900 hover:text-gray-700"
-							href="/about"
+							href="/users"
 						>
-							About
+							Users
 						</Link>
 					</li>
 				</ul>
