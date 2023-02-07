@@ -2,7 +2,29 @@ POST http://localhost:3000/api/users
 Content-Type: application/json
 
 {
-    "name": "Sophie Alpert",
-    "email": "bye@gmail.com",
-    "imageUrl": "https://avatars.githubusercontent.com/u/6820?v=4"
+    "name": "Dominic Gannaway",
+    "email": "g@gmail.com",
+    "imageUrl": "https://avatars.githubusercontent.com/u/1519870?v=4",
+    "posts": {
+        "createMany": {
+            "data": [
+                {
+                    "title": "My first post",
+                    "content": "Hello world!",
+                    "favorites": 10
+                },
+                {
+                    "title": "My second post",
+                    "content": "Hello world again!",
+                    "favorites": 15
+
+                },
+                                {
+                    "title": "My third post",
+                    "content": "Hello world again again!",
+                    "favorites": 44
+                }
+            ]
+        }
+    }
 }

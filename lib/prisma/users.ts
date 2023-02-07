@@ -28,6 +28,7 @@ export async function getUserById(id: string) {
 			where: {
 				id,
 			},
+			include: { posts: true },
 		})
 		return { user }
 	} catch (error) {

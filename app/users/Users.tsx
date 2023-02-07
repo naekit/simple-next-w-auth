@@ -1,7 +1,7 @@
 import { getUsers } from "@/lib/prisma/users"
 import Link from "next/link"
 
-const Users = async () => {
+const Users: any = async () => {
 	const { users } = await getUsers()
 
 	return (
@@ -11,7 +11,7 @@ const Users = async () => {
 					Users
 				</h2>
 				<ul className="space-y-4">
-					{users.map((user) => (
+					{users.map((user: any) => (
 						<li key={user.id}>
 							<Link href={`/users/${user.id}`}>{user.name}</Link>
 						</li>

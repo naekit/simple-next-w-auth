@@ -1,6 +1,6 @@
 import Users from "./Users"
 
-const UsersLayout = async ({ children }) => {
+const UsersLayout = async ({ children }: any) => {
 	return (
 		<section className="flex">
 			<aside className="w-1/4 bg-gray-200">

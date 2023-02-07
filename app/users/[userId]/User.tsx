@@ -1,8 +1,8 @@
 import Image from "next/image"
 
-const User = async ({ user }) => {
+const User: any = async ({ user }: any) => {
 	return (
-		<section className="m-4 py-4">
+		<section className="m-4 py-4 flex gap-10">
 			<div>
 				<Image
 					src={user?.imageUrl}
@@ -13,6 +13,23 @@ const User = async ({ user }) => {
 				/>
 				<h1 className="text-2xl font-semibold">{user.name}</h1>
 				<p className="text-sm text-stone-700">{user.email}</p>
+			</div>
+			<div className="grow">
+				{user.posts.length !== 0 && (
+					<h2 className="text-xl font-semibold">Posts</h2>
+				)}
+				<ul>
+					{user.posts?.map((post: any) => (
+						<li key={post.id}>
+							<h3 className="text-lg font-semibold">
+								{post.title}
+							</h3>
+							<p className="text-sm text-stone-700">
+								{post.content}
+							</p>
+						</li>
+					))}
+				</ul>
 			</div>
 		</section>
 	)
