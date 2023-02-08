@@ -9,8 +9,8 @@ const User: any = async ({ user }: any) => {
 					src={user?.imageUrl}
 					alt={user.name}
 					style={{ objectFit: "cover" }}
-					width={200}
-					height={200}
+					width={220}
+					height={220}
 					priority
 				/>
 				<h1 className="text-2xl font-semibold">{user.name}</h1>
