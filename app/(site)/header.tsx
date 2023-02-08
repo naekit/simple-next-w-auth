@@ -1,5 +1,6 @@
 // header component nextjs 13 typescript
 import Link from "next/link"
+import LoginButton from "./LoginButton"
 
 export default function Header() {
 	return (
@@ -24,6 +25,9 @@ export default function Header() {
 						>
 							Users
 						</Link>
+					</li>
+					<li>
+						<LoginButton />
 					</li>
 				</ul>
 			</nav>

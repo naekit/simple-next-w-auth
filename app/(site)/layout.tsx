@@ -1,6 +1,7 @@
 import Footer from "./footer"
 import "./globals.css"
 import Header from "./header"
+import Provider from "./provider"
 
 export default function RootLayout({
 	children,
@@ -11,9 +12,11 @@ export default function RootLayout({
 		<html lang="en">
 			<head />
 			<body className="h-screen bg-stone-200">
-				<Header />
-				<main>{children}</main>
-				<Footer />
+				<Provider>
+					<Header />
+					<main>{children}</main>
+					<Footer />
+				</Provider>
 			</body>
 		</html>
 	)
